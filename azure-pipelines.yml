@@ -1,3 +1,14 @@
 pool: MyAgentPool
 steps:
 - bash: echo hello world
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'MCAPS-Support-REQ-72612-2024-rcouvinha(5aab6218-f7e1-4b24-a898-94d2f81571fb)'
+    appType: 'webApp'
+    WebAppName: 'CICDApp120240703144337'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'RCouvinhaCICD'
+    SlotName: 'production'
+    VirtualApplication: 'testApp'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
