@@ -10,5 +10,5 @@ steps:
   inputs:
     azureSubscription: 'MCAPS-Support-REQ-72612-2024-rcouvinha(5aab6218-f7e1-4b24-a898-94d2f81571fb)'
     appType: 'webApp'
-    appName: 'testapp'
+    appName: 'CICDApp120240703144337 '
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
